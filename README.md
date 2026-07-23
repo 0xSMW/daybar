@@ -44,5 +44,5 @@ DayBar is a clean, lightweight macOS menu-bar clock and calendar replacement wri
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](file:///Users/stephenwalker/Code/projects/daybar/LICENSE) file for details.
+MIT @ Stephen M. Walker II (SMW.AI)
 
