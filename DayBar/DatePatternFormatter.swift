@@ -1,0 +1,76 @@
+//
+//  DatePatternFormatter.swift
+//  DayBar
+//
+
+import Foundation
+
+struct DatePatternFormatter {
+    static let defaultPattern = "E h:mm a"
+    
+    enum Granularity {
+        case seconds
+        case minutes
+        case daily
+    }
+    
+    static func validate(pattern: String) -> Bool {
+        let trimmed = pattern.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return false }
+        
+        let formatter = DateFormatter()
+        formatter.locale = .autoupdatingCurrent
+        formatter.calendar = .autoupdatingCurrent
+        formatter.timeZone = .autoupdatingCurrent
+        formatter.dateFormat = pattern
+        
+        let formatted = formatter.string(from: Date())
+        return !formatted.isEmpty
+    }
+    
+    static func format(date: Date, pattern: String) -> String {
+        let activePattern = validate(pattern: pattern) ? pattern : defaultPattern
+        let formatter = DateFormatter()
+        formatter.locale = .autoupdatingCurrent
+        formatter.calendar = .autoupdatingCurrent
+        formatter.timeZone = .autoupdatingCurrent
+        formatter.dateFormat = activePattern
+        return formatter.string(from: date)
+    }
+    
+    static func granularity(for pattern: String) -> Granularity {
+        let activePattern = validate(pattern: pattern) ? pattern : defaultPattern
+        
+        if activePattern.contains("s") || activePattern.contains("S") {
+            return .seconds
+        }
+        if activePattern.contains("m") || activePattern.contains("h") || activePattern.contains("H") || activePattern.contains("k") || activePattern.contains("K") {
+            return .minutes
+        }
+        return .daily
+    }
+    
+    static func nextUpdateInterval(for pattern: String, from date: Date = Date()) -> TimeInterval {
+        let g = granularity(for: pattern)
+        let calendar = Calendar.autoupdatingCurrent
+        
+        switch g {
+        case .seconds:
+            let nanoseconds = Double(calendar.component(.nanosecond, from: date))
+            let secondsFraction = nanoseconds / 1_000_000_000.0
+            return max(0.05, 1.0 - secondsFraction)
+            
+        case .minutes:
+            let seconds = Double(calendar.component(.second, from: date))
+            let nanoseconds = Double(calendar.component(.nanosecond, from: date))
+            let subMinute = seconds + (nanoseconds / 1_000_000_000.0)
+            return max(0.1, 60.0 - subMinute)
+            
+        case .daily:
+            if let nextDay = calendar.nextDate(after: date, matching: DateComponents(hour: 0, minute: 0, second: 0), matchingPolicy: .nextTime) {
+                return max(1.0, nextDay.timeIntervalSince(date))
+            }
+            return 60.0
+        }
+    }
+}

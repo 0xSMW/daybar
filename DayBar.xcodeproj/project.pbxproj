@@ -1,0 +1,374 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		XX4CDD7BDA9527231FD154XX /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = XX0182E36293E7A95A811DXX /* Assets.xcassets */; };
+		XXAD25BC19689D5035DE9BXX /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = XXE274B35F27E365B849C0XX /* ContentView.swift */; };
+		XXEF4A5F92C0CED022A4A2XX /* DayBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = XX0D045423B498D9D4B488XX /* DayBarApp.swift */; };
+		XXSETTSTORE0000000000BLD /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = XXSETTSTORE0000000000REF /* SettingsStore.swift */; };
+		XXDATEFMT000000000000BLD /* DatePatternFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = XXDATEFMT000000000000REF /* DatePatternFormatter.swift */; };
+		XXCALMENU000000000000BLD /* CalendarMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = XXCALMENU000000000000REF /* CalendarMenuView.swift */; };
+		XXPREFSVW000000000000BLD /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = XXPREFSVW000000000000REF /* PreferencesView.swift */; };
+		XXABOUTVW000000000000BLD /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = XXABOUTVW000000000000REF /* AboutView.swift */; };
+		XXWINMGR0000000000000BLD /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = XXWINMGR0000000000000REF /* WindowManager.swift */; };
+		XXSTATMGR000000000000BLD /* StatusItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = XXSTATMGR000000000000REF /* StatusItemManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		XX0182E36293E7A95A811DXX /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		XX0D045423B498D9D4B488XX /* DayBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayBarApp.swift; sourceTree = "<group>"; };
+		XX2D1593FF5CED69F5C83DXX /* DayBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		XXE274B35F27E365B849C0XX /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		XXSETTSTORE0000000000REF /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		XXDATEFMT000000000000REF /* DatePatternFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePatternFormatter.swift; sourceTree = "<group>"; };
+		XXCALMENU000000000000REF /* CalendarMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarMenuView.swift; sourceTree = "<group>"; };
+		XXPREFSVW000000000000REF /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		XXABOUTVW000000000000REF /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		XXWINMGR0000000000000REF /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
+		XXSTATMGR000000000000REF /* StatusItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		XX074B8811C1CF8E8A3D74XX /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0000000000000000MAINGRP = {
+			isa = PBXGroup;
+			children = (
+				XX7AA3A087BE6846EC517AXX /* DayBar */,
+				XXE87C8832ADB06B2840E0XX /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		XX7AA3A087BE6846EC517AXX /* DayBar */ = {
+			isa = PBXGroup;
+			children = (
+				XX0D045423B498D9D4B488XX /* DayBarApp.swift */,
+				XXE274B35F27E365B849C0XX /* ContentView.swift */,
+				XXSETTSTORE0000000000REF /* SettingsStore.swift */,
+				XXDATEFMT000000000000REF /* DatePatternFormatter.swift */,
+				XXCALMENU000000000000REF /* CalendarMenuView.swift */,
+				XXPREFSVW000000000000REF /* PreferencesView.swift */,
+				XXABOUTVW000000000000REF /* AboutView.swift */,
+				XXWINMGR0000000000000REF /* WindowManager.swift */,
+				XXSTATMGR000000000000REF /* StatusItemManager.swift */,
+				XX0182E36293E7A95A811DXX /* Assets.xcassets */,
+			);
+			path = DayBar;
+			sourceTree = "<group>";
+		};
+		XXE87C8832ADB06B2840E0XX /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				XX2D1593FF5CED69F5C83DXX /* DayBar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		XX9525269083E60676FD59XX /* DayBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = XX364880BF72A2386FEE7BXX /* Build configuration list for PBXNativeTarget "DayBar" */;
+			buildPhases = (
+				XXE45443DC38DCFE1DB622XX /* Sources */,
+				XX074B8811C1CF8E8A3D74XX /* Frameworks */,
+				XXFA5A8CCDD805DF7AEF9CXX /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DayBar;
+			productName = DayBar;
+			productReference = XX2D1593FF5CED69F5C83DXX /* DayBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00000000000000000000ROOT /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					XX9525269083E60676FD59XX = {
+						CreatedOnToolsVersion = 16.2;
+					};
+				};
+			};
+			buildConfigurationList = XX67008FFE0D30B03D8FD6XX /* Build configuration list for PBXProject "DayBar" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0000000000000000MAINGRP;
+			productRefGroup = XXE87C8832ADB06B2840E0XX /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				XX9525269083E60676FD59XX /* DayBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		XXFA5A8CCDD805DF7AEF9CXX /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				XX4CDD7BDA9527231FD154XX /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		XXE45443DC38DCFE1DB622XX /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				XXEF4A5F92C0CED022A4A2XX /* DayBarApp.swift in Sources */,
+				XXAD25BC19689D5035DE9BXX /* ContentView.swift in Sources */,
+				XXSETTSTORE0000000000BLD /* SettingsStore.swift in Sources */,
+				XXDATEFMT000000000000BLD /* DatePatternFormatter.swift in Sources */,
+				XXCALMENU000000000000BLD /* CalendarMenuView.swift in Sources */,
+				XXPREFSVW000000000000BLD /* PreferencesView.swift in Sources */,
+				XXABOUTVW000000000000BLD /* AboutView.swift in Sources */,
+				XXWINMGR0000000000000BLD /* WindowManager.swift in Sources */,
+				XXSTATMGR000000000000BLD /* StatusItemManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		XX15E6ECE66DD9B23AF9B1XX /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = DayBar;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Stephen M. Walker II";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daybar.daybar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		XX1BCB8EF0634CEA1A5038XX /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = DayBar;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Stephen M. Walker II";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daybar.daybar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		XX3C7DEF55B8E1388B9093XX /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = ___BESTMACOSVERSION___;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		XXACCB41A472416FFD9861XX /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = ___BESTMACOSVERSION___;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0000000000000000CFGLST /* Build configuration list for [unknown] */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		XX364880BF72A2386FEE7BXX /* Build configuration list for PBXNativeTarget "DayBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				XX15E6ECE66DD9B23AF9B1XX /* Debug */,
+				XX1BCB8EF0634CEA1A5038XX /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		XX67008FFE0D30B03D8FD6XX /* Build configuration list for PBXProject "DayBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				XXACCB41A472416FFD9861XX /* Debug */,
+				XX3C7DEF55B8E1388B9093XX /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00000000000000000000ROOT /* Project object */;
+}
