@@ -42,6 +42,9 @@ DayBar is a clean, lightweight macOS menu-bar clock and calendar replacement wri
 2. Double-click `DayBar.app` to launch it. The app will immediately appear in your macOS menu bar.
 3. (Optional) Open **Preferences…** from the DayBar menu and check **Launch at login** to automatically start DayBar when you log in.
 
+> [!WARNING]
+> This codebase was written entirely by Gemini 3.6 Flash.
+
 ## License
 
 MIT @ Stephen M. Walker II (SMW.AI)
