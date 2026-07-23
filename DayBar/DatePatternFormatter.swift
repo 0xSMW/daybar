@@ -5,8 +5,17 @@
 
 import Foundation
 
+@MainActor
 struct DatePatternFormatter {
     static let defaultPattern = "E h:mm a"
+    
+    private static let formatter: DateFormatter = {
+        let fmt = DateFormatter()
+        fmt.locale = .autoupdatingCurrent
+        fmt.calendar = .autoupdatingCurrent
+        fmt.timeZone = .autoupdatingCurrent
+        return fmt
+    }()
     
     enum Granularity {
         case seconds
@@ -18,22 +27,13 @@ struct DatePatternFormatter {
         let trimmed = pattern.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty else { return false }
         
-        let formatter = DateFormatter()
-        formatter.locale = .autoupdatingCurrent
-        formatter.calendar = .autoupdatingCurrent
-        formatter.timeZone = .autoupdatingCurrent
         formatter.dateFormat = pattern
-        
         let formatted = formatter.string(from: Date())
         return !formatted.isEmpty
     }
     
     static func format(date: Date, pattern: String) -> String {
         let activePattern = validate(pattern: pattern) ? pattern : defaultPattern
-        let formatter = DateFormatter()
-        formatter.locale = .autoupdatingCurrent
-        formatter.calendar = .autoupdatingCurrent
-        formatter.timeZone = .autoupdatingCurrent
         formatter.dateFormat = activePattern
         return formatter.string(from: date)
     }

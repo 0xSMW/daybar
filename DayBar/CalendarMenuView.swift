@@ -10,7 +10,7 @@ struct CalendarMonthData {
     let days: [DayCell]
     
     struct DayCell: Identifiable {
-        let id = UUID()
+        var id: Date { date }
         let date: Date
         let dayNumber: Int
         let isCurrentMonth: Bool
@@ -135,12 +135,17 @@ struct CalendarMenuView: View {
         displayedMonth = Date()
     }
     
-    private func monthYearString(for date: Date) -> String {
+    private static let monthYearFormatter: DateFormatter = {
         let fmt = DateFormatter()
         fmt.locale = .autoupdatingCurrent
-        fmt.calendar = calendar
+        fmt.calendar = .autoupdatingCurrent
         fmt.dateFormat = "LLLL yyyy"
-        return fmt.string(from: date).capitalized
+        return fmt
+    }()
+    
+    private func monthYearString(for date: Date) -> String {
+        Self.monthYearFormatter.calendar = calendar
+        return Self.monthYearFormatter.string(from: date).capitalized
     }
     
     private func reorderedWeekdaySymbols() -> [String] {

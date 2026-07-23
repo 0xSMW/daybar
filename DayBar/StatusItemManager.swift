@@ -86,31 +86,53 @@ final class StatusItemManager: NSObject, NSMenuDelegate {
         scheduleUpdate()
     }
     
+    private lazy var cachedCalendarImage: NSImage? = {
+        let image = NSImage(systemSymbolName: "calendar", accessibilityDescription: "Calendar")
+        image?.isTemplate = true
+        return image
+    }()
+    
     func scheduleUpdate() {
         timer?.invalidate()
         updateDisplay()
         
         let interval = DatePatternFormatter.nextUpdateInterval(for: settings.dateFormat)
-        timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: false) { [weak self] _ in
+        let granularity = DatePatternFormatter.granularity(for: settings.dateFormat)
+        
+        let newTimer = Timer(timeInterval: interval, repeats: false) { [weak self] _ in
             Task { @MainActor in
                 self?.scheduleUpdate()
             }
         }
+        
+        // Coalesce timers for power efficiency
+        switch granularity {
+        case .seconds: newTimer.tolerance = 0.05
+        case .minutes: newTimer.tolerance = 0.5
+        case .daily: newTimer.tolerance = 1.0
+        }
+        
+        RunLoop.main.add(newTimer, forMode: .common)
+        self.timer = newTimer
     }
     
     private func updateDisplay() {
         guard let button = statusItem?.button else { return }
         
         let formattedText = DatePatternFormatter.format(date: Date(), pattern: settings.dateFormat)
-        button.title = formattedText
+        if button.title != formattedText {
+            button.title = formattedText
+        }
         
         if settings.showsIcon {
-            let image = NSImage(systemSymbolName: "calendar", accessibilityDescription: "Calendar")
-            image?.isTemplate = true
-            button.image = image
-            button.imagePosition = .imageLeft
+            if button.image == nil {
+                button.image = cachedCalendarImage
+                button.imagePosition = .imageLeft
+            }
         } else {
-            button.image = nil
+            if button.image != nil {
+                button.image = nil
+            }
         }
     }
     
