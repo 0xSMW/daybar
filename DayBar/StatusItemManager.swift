@@ -86,11 +86,60 @@ final class StatusItemManager: NSObject, NSMenuDelegate {
         scheduleUpdate()
     }
     
-    private lazy var cachedCalendarImage: NSImage? = {
-        let image = NSImage(systemSymbolName: "calendar", accessibilityDescription: "Calendar")
-        image?.isTemplate = true
+    private var cachedCalendarImage: (day: Int, image: NSImage)?
+
+    private func calendarImage(for date: Date) -> NSImage? {
+        let day = Calendar.autoupdatingCurrent.component(.day, from: date)
+        if let cachedCalendarImage, cachedCalendarImage.day == day {
+            return cachedCalendarImage.image
+        }
+
+        let accessibilityDescription = "Calendar, day \(day)"
+        guard let calendarFrame = NSImage(named: "CalendarFrame") else {
+            return nil
+        }
+
+        let horizontalPadding: CGFloat = 2
+        let frameSize = calendarFrame.size
+        let image = NSImage(
+            size: NSSize(
+                width: frameSize.width + horizontalPadding * 2,
+                height: frameSize.height
+            ),
+            flipped: true
+        ) { _ in
+            calendarFrame.draw(
+                in: NSRect(
+                    x: horizontalPadding,
+                    y: 0,
+                    width: frameSize.width,
+                    height: frameSize.height
+                )
+            )
+
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.alignment = .center
+            "\(day)".draw(
+                in: NSRect(
+                    x: horizontalPadding,
+                    y: 3,
+                    width: frameSize.width,
+                    height: frameSize.height - 3
+                ),
+                withAttributes: [
+                    .foregroundColor: NSColor.black,
+                    .font: NSFont.boldSystemFont(ofSize: 9),
+                    .paragraphStyle: paragraphStyle,
+                ]
+            )
+            return true
+        }
+
+        image.isTemplate = true
+        image.accessibilityDescription = accessibilityDescription
+        cachedCalendarImage = (day, image)
         return image
-    }()
+    }
     
     func scheduleUpdate() {
         timer?.invalidate()
@@ -118,15 +167,16 @@ final class StatusItemManager: NSObject, NSMenuDelegate {
     
     private func updateDisplay() {
         guard let button = statusItem?.button else { return }
-        
-        let formattedText = DatePatternFormatter.format(date: Date(), pattern: settings.dateFormat)
+
+        let now = Date()
+        let formattedText = DatePatternFormatter.format(date: now, pattern: settings.dateFormat)
         if button.title != formattedText {
             button.title = formattedText
         }
         
         if settings.showsIcon {
-            if button.image == nil {
-                button.image = cachedCalendarImage
+            if let image = calendarImage(for: now), button.image !== image {
+                button.image = image
                 button.imagePosition = .imageLeft
             }
         } else {
