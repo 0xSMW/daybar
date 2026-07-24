@@ -2,7 +2,7 @@
 
 Daybar is a lightweight macOS menu-bar clock and calendar written in Swift with AppKit and SwiftUI. It runs as an accessory app without a Dock icon and provides custom ICU date formatting, a compact month calendar, optional launch at login, and no network entitlement.
 
-<img width="474" height="371" alt="image" src="https://github.com/user-attachments/assets/5a1db787-12e6-441c-8d19-f221c293a10e" />
+<img width="474" alt="Daybar menu-bar clock with its compact calendar open" src="Artwork/DaybarScreenshot.png" />
 
 ## Features
 
@@ -43,3 +43,7 @@ Daybar is a lightweight macOS menu-bar clock and calendar written in Swift with 
 1. Drag `Daybar.app` into your `/Applications` folder.
 2. Double-click `Daybar.app` to launch it. The app will immediately appear in your macOS menu bar.
 3. (Optional) Open **Preferences…** from the Daybar menu and check **Launch at login** to automatically start Daybar when you log in.
+
+## Acknowledgements
+
+Daybar was inspired by Shaun Inman’s Day-O, originally released in 2011. A special shout-out and thank you to Shaun for the elegant menu-bar calendar idea.
