@@ -1,6 +1,6 @@
 //
 //  CalendarMenuView.swift
-//  DayBar
+//  Daybar
 //
 
 import SwiftUI

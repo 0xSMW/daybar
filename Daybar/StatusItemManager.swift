@@ -1,6 +1,6 @@
 //
 //  StatusItemManager.swift
-//  DayBar
+//  Daybar
 //
 
 import AppKit

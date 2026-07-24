@@ -1,6 +1,6 @@
 //
 //  AboutView.swift
-//  DayBar
+//  Daybar
 //
 
 import SwiftUI

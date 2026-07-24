@@ -1,6 +1,6 @@
 //
 //  DatePatternFormatter.swift
-//  DayBar
+//  Daybar
 //
 
 import Foundation

@@ -30,16 +30,16 @@ Daybar is a lightweight macOS menu-bar clock and calendar written in Swift with 
 
 2. Build the app using `xcodebuild`:
    ```bash
-   xcodebuild -project DayBar.xcodeproj -scheme DayBar -configuration Release build
+   xcodebuild -project Daybar.xcodeproj -scheme Daybar -configuration Release build
    ```
 
 3. Locate the built application bundle in Xcode's DerivedData or build folder:
    ```bash
-   open ~/Library/Developer/Xcode/DerivedData/DayBar-*/Build/Products/Release/
+   open ~/Library/Developer/Xcode/DerivedData/Daybar-*/Build/Products/Release/
    ```
 
 ### Installing
 
-1. Drag `DayBar.app` into your `/Applications` folder.
-2. Double-click `DayBar.app` to launch it. The app will immediately appear in your macOS menu bar.
+1. Drag `Daybar.app` into your `/Applications` folder.
+2. Double-click `Daybar.app` to launch it. The app will immediately appear in your macOS menu bar.
 3. (Optional) Open **Preferences…** from the Daybar menu and check **Launch at login** to automatically start Daybar when you log in.

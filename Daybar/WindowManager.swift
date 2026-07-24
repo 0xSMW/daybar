@@ -1,6 +1,6 @@
 //
 //  WindowManager.swift
-//  DayBar
+//  Daybar
 //
 
 import AppKit

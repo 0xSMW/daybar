@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "XX9525269083E60676FD59XX"
-               BuildableName = "DayBar.app"
-               BlueprintName = "DayBar"
-               ReferencedContainer = "container:DayBar.xcodeproj">
+               BuildableName = "Daybar.app"
+               BlueprintName = "Daybar"
+               ReferencedContainer = "container:Daybar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "XX9525269083E60676FD59XX"
-            BuildableName = "DayBar.app"
-            BlueprintName = "DayBar"
-            ReferencedContainer = "container:DayBar.xcodeproj">
+            BuildableName = "Daybar.app"
+            BlueprintName = "Daybar"
+            ReferencedContainer = "container:Daybar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -60,9 +60,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "XX9525269083E60676FD59XX"
-            BuildableName = "DayBar.app"
-            BlueprintName = "DayBar"
-            ReferencedContainer = "container:DayBar.xcodeproj">
+            BuildableName = "Daybar.app"
+            BlueprintName = "Daybar"
+            ReferencedContainer = "container:Daybar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

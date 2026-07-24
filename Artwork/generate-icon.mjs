@@ -9,10 +9,10 @@ const artworkDirectory = dirname(fileURLToPath(import.meta.url));
 const repositoryRoot = resolve(artworkDirectory, "..");
 const assetDirectory = resolve(
   repositoryRoot,
-  "DayBar/Assets.xcassets/AppIcon.appiconset",
+  "Daybar/Assets.xcassets/AppIcon.appiconset",
 );
 const templatePath = resolve(artworkDirectory, "calendar.badge.svg");
-const sourcePath = resolve(artworkDirectory, "DayBarIcon.svg");
+const sourcePath = resolve(artworkDirectory, "DaybarIcon.svg");
 
 const template = readFileSync(templatePath, "utf8");
 const regularSymbol = template.match(

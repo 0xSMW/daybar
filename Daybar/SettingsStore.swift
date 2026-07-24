@@ -1,6 +1,6 @@
 //
 //  SettingsStore.swift
-//  DayBar
+//  Daybar
 //
 
 import Foundation

@@ -1,13 +1,13 @@
 //
-//  DayBarApp.swift
-//  DayBar
+//  DaybarApp.swift
+//  Daybar
 //
 
 import SwiftUI
 import AppKit
 
 @main
-struct DayBarApp: App {
+struct DaybarApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some Scene {
