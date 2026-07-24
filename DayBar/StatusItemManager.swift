@@ -17,7 +17,7 @@ final class StatusItemManager: NSObject, NSMenuDelegate {
     private let calendarMenuItem = NSMenuItem()
     private lazy var calendarHostingView: NSHostingView<CalendarMenuView> = {
         let view = NSHostingView(rootView: CalendarMenuView())
-        view.frame = NSRect(x: 0, y: 0, width: 220, height: 215)
+        view.frame = NSRect(origin: .zero, size: CalendarMenuView.menuSize)
         return view
     }()
     

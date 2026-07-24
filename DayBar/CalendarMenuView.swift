@@ -5,10 +5,7 @@
 
 import SwiftUI
 
-struct CalendarMonthData {
-    let monthDate: Date
-    let days: [DayCell]
-    
+enum CalendarMonthData {
     struct DayCell: Identifiable {
         var id: Date { date }
         let date: Date
@@ -51,11 +48,13 @@ struct CalendarMonthData {
 }
 
 struct CalendarMenuView: View {
+    static let menuSize = CGSize(width: 190, height: 188)
+
     @State private var displayedMonth: Date = Date()
     private let calendar = Calendar.autoupdatingCurrent
     
     var body: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: 5) {
             // Header: <  Month Year  >
             HStack {
                 Button(action: { changeMonth(by: -1) }) {
@@ -96,7 +95,6 @@ struct CalendarMenuView: View {
                 .buttonStyle(.plain)
             }
             .padding(.horizontal, 4)
-            .padding(.top, 2)
             
             // Weekday headers
             let weekdaySymbols = reorderedWeekdaySymbols()
@@ -108,21 +106,17 @@ struct CalendarMenuView: View {
                         .frame(maxWidth: .infinity)
                 }
             }
-            .padding(.vertical, 2)
             
             // 6 × 7 Days Grid
             let cells = CalendarMonthData.generate(for: displayedMonth, calendar: calendar)
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 0), count: 7), spacing: 2) {
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 0), count: 7), spacing: 1) {
                 ForEach(cells) { cell in
                     DayCellView(cell: cell)
                 }
             }
         }
-        .padding(10)
-        .frame(width: 220)
-        .onAppear {
-            displayedMonth = Date()
-        }
+        .padding(8)
+        .frame(width: Self.menuSize.width, height: Self.menuSize.height)
     }
     
     private func changeMonth(by value: Int) {
@@ -175,6 +169,6 @@ struct DayCellView: View {
                     cell.isToday ? .white : (cell.isCurrentMonth ? .primary : Color.secondary.opacity(0.35))
                 )
         }
-        .frame(height: 22)
+        .frame(height: 20)
     }
 }

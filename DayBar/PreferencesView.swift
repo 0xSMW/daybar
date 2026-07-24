@@ -7,8 +7,6 @@ import SwiftUI
 
 struct PreferencesView: View {
     @ObservedObject var settings = SettingsStore.shared
-    @State private var currentDate = Date()
-    @State private var timer: Timer?
     
     var isValidPattern: Bool {
         DatePatternFormatter.validate(pattern: settings.dateFormat)
@@ -26,11 +24,13 @@ struct PreferencesView: View {
                     .font(.system(size: 12, design: .monospaced))
                 
                 if isValidPattern {
-                    HStack(spacing: 4) {
-                        Text("Preview:")
-                            .foregroundColor(.secondary)
-                        Text(DatePatternFormatter.format(date: currentDate, pattern: settings.dateFormat))
-                            .fontWeight(.medium)
+                    TimelineView(.periodic(from: .now, by: 1)) { context in
+                        HStack(spacing: 4) {
+                            Text("Preview:")
+                                .foregroundColor(.secondary)
+                            Text(DatePatternFormatter.format(date: context.date, pattern: settings.dateFormat))
+                                .fontWeight(.medium)
+                        }
                     }
                     .font(.system(size: 11))
                 } else {
@@ -79,16 +79,6 @@ struct PreferencesView: View {
         }
         .padding(20)
         .frame(width: 350)
-        .onAppear {
-            currentDate = Date()
-            timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-                currentDate = Date()
-            }
-        }
-        .onDisappear {
-            timer?.invalidate()
-            timer = nil
-        }
     }
     
     private func formatExample(_ pattern: String, example: String) -> some View {

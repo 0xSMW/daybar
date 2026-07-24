@@ -6,6 +6,19 @@
 import SwiftUI
 
 struct AboutView: View {
+    private var displayName: String {
+        Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String ?? "DayBar"
+    }
+
+    private var version: String {
+        Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0"
+    }
+
+    private var copyright: String {
+        Bundle.main.object(forInfoDictionaryKey: "NSHumanReadableCopyright") as? String
+            ?? "© 2026 Stephen M. Walker II"
+    }
+
     var body: some View {
         VStack(spacing: 14) {
             ZStack {
@@ -21,10 +34,10 @@ struct AboutView: View {
             }
             
             VStack(spacing: 4) {
-                Text("DayBar")
+                Text(displayName)
                     .font(.system(size: 18, weight: .bold))
                 
-                Text("Version 1.0.0")
+                Text("Version \(version)")
                     .font(.system(size: 11))
                     .foregroundColor(.secondary)
             }
@@ -37,7 +50,7 @@ struct AboutView: View {
             
             Divider()
             
-            Text("© 2026 Stephen M. Walker II")
+            Text(copyright)
                 .font(.system(size: 10))
                 .foregroundColor(.secondary)
         }
