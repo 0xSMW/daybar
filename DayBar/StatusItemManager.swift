@@ -67,7 +67,7 @@ final class StatusItemManager: NSObject, NSMenuDelegate {
             .store(in: &cancellables)
             
         // System event listeners
-        NotificationCenter.default.publisher(for: NSWorkspace.didWakeNotification)
+        NSWorkspace.shared.notificationCenter.publisher(for: NSWorkspace.didWakeNotification)
             .sink { [weak self] _ in self?.scheduleUpdate() }
             .store(in: &cancellables)
             

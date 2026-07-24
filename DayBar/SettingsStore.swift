@@ -14,7 +14,6 @@ final class SettingsStore: ObservableObject {
     private enum Keys {
         static let dateFormat = "dateFormat"
         static let showsIcon = "showsIcon"
-        static let launchesAtLogin = "launchesAtLogin"
     }
     
     @Published var dateFormat: String {
@@ -31,49 +30,46 @@ final class SettingsStore: ObservableObject {
     
     @Published var launchesAtLogin: Bool {
         didSet {
-            UserDefaults.standard.set(launchesAtLogin, forKey: Keys.launchesAtLogin)
+            guard !isSynchronizingLaunchAtLogin else { return }
             updateLaunchAtLogin(enabled: launchesAtLogin)
         }
     }
     
     @Published var launchAtLoginError: String? = nil
+    private var isSynchronizingLaunchAtLogin = false
     
     init() {
         let defaults = UserDefaults.standard
         defaults.register(defaults: [
-            Keys.dateFormat: "E h:mm a",
-            Keys.showsIcon: true,
-            Keys.launchesAtLogin: false
+            Keys.dateFormat: DatePatternFormatter.defaultPattern,
+            Keys.showsIcon: true
         ])
         
-        self.dateFormat = defaults.string(forKey: Keys.dateFormat) ?? "E h:mm a"
+        self.dateFormat = defaults.string(forKey: Keys.dateFormat) ?? DatePatternFormatter.defaultPattern
         self.showsIcon = defaults.bool(forKey: Keys.showsIcon)
-        
-        if #available(macOS 13.0, *) {
-            self.launchesAtLogin = (SMAppService.mainApp.status == .enabled)
-        } else {
-            self.launchesAtLogin = defaults.bool(forKey: Keys.launchesAtLogin)
-        }
+        self.launchesAtLogin = (SMAppService.mainApp.status == .enabled)
     }
     
     private func updateLaunchAtLogin(enabled: Bool) {
-        if #available(macOS 13.0, *) {
-            do {
-                if enabled {
-                    if SMAppService.mainApp.status != .enabled {
-                        try SMAppService.mainApp.register()
-                    }
-                } else {
-                    if SMAppService.mainApp.status == .enabled {
-                        try SMAppService.mainApp.unregister()
-                    }
+        do {
+            if enabled {
+                if SMAppService.mainApp.status != .enabled {
+                    try SMAppService.mainApp.register()
                 }
-                launchAtLoginError = nil
-            } catch {
-                launchAtLoginError = error.localizedDescription
-                // Sync back state on failure
-                self.launchesAtLogin = (SMAppService.mainApp.status == .enabled)
+            } else {
+                if SMAppService.mainApp.status == .enabled {
+                    try SMAppService.mainApp.unregister()
+                }
             }
+            launchAtLoginError = nil
+        } catch {
+            let errorMessage = error.localizedDescription
+
+            isSynchronizingLaunchAtLogin = true
+            launchesAtLogin = (SMAppService.mainApp.status == .enabled)
+            isSynchronizingLaunchAtLogin = false
+
+            launchAtLoginError = errorMessage
         }
     }
 }

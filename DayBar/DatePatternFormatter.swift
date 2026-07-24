@@ -40,14 +40,39 @@ struct DatePatternFormatter {
     
     static func granularity(for pattern: String) -> Granularity {
         let activePattern = validate(pattern: pattern) ? pattern : defaultPattern
-        
-        if activePattern.contains("s") || activePattern.contains("S") {
-            return .seconds
+        let secondFields: Set<Character> = ["s", "S", "A"]
+        let minuteFields: Set<Character> = [
+            "m", "h", "H", "k", "K",
+            "a", "b", "B",
+            "z", "Z", "O", "v", "V", "X", "x"
+        ]
+        let symbols = Array(activePattern)
+        var isInsideQuote = false
+        var finestGranularity = Granularity.daily
+        var index = 0
+
+        while index < symbols.count {
+            let symbol = symbols[index]
+
+            if symbol == "'" {
+                if index + 1 < symbols.count, symbols[index + 1] == "'" {
+                    index += 2
+                    continue
+                }
+                isInsideQuote.toggle()
+            } else if !isInsideQuote {
+                if secondFields.contains(symbol) {
+                    return .seconds
+                }
+                if minuteFields.contains(symbol) {
+                    finestGranularity = .minutes
+                }
+            }
+
+            index += 1
         }
-        if activePattern.contains("m") || activePattern.contains("h") || activePattern.contains("H") || activePattern.contains("k") || activePattern.contains("K") {
-            return .minutes
-        }
-        return .daily
+
+        return finestGranularity
     }
     
     static func nextUpdateInterval(for pattern: String, from date: Date = Date()) -> TimeInterval {
