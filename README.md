@@ -2,6 +2,8 @@
 
 DayBar is a clean, lightweight macOS menu-bar clock and calendar replacement written in Swift 6 and AppKit with selective SwiftUI. Built as a dedicated agent application, it lives exclusively in your menu bar without occupying space in the Dock, providing custom ICU date formatting, instant month-at-a-glance navigation, and zero background overhead or network permissions.
 
+<img width="474" height="371" alt="image" src="https://github.com/user-attachments/assets/5a1db787-12e6-441c-8d19-f221c293a10e" />
+
 ## Features
 
 - **Customizable Menu-Bar Clock**: Format date and time display using standard ICU pattern strings (e.g., `E h:mm a`, `yyyy-MM-dd HH:mm:ss`) with live pattern validation and optional monochrome calendar icon.
