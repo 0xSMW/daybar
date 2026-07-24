@@ -54,47 +54,53 @@ struct CalendarMenuView: View {
     private let calendar = Calendar.autoupdatingCurrent
     
     var body: some View {
+        let isShowingCurrentMonth = calendar.isDate(
+            displayedMonth,
+            equalTo: Date(),
+            toGranularity: .month
+        )
+
         VStack(spacing: 5) {
-            // Header: <  Month Year  >
-            HStack {
+            // Header: Month Year  <  •  >
+            HStack(spacing: 0) {
+                Text(monthYearString(for: displayedMonth))
+                    .font(.system(size: 13, weight: .semibold))
+                    .lineLimit(1)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .layoutPriority(1)
+
                 Button(action: { changeMonth(by: -1) }) {
                     Image(systemName: "chevron.left")
                         .font(.system(size: 11, weight: .bold))
                         .foregroundColor(.secondary)
-                        .frame(width: 24, height: 24)
+                        .frame(width: 18, height: 24)
                         .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
-                
-                Spacer()
-                
+                .help("Previous Month")
+
                 Button(action: { resetToToday() }) {
-                    HStack(spacing: 5) {
-                        Text(monthYearString(for: displayedMonth))
-                            .font(.system(size: 13, weight: .semibold))
-                        
-                        if !calendar.isDate(displayedMonth, equalTo: Date(), toGranularity: .month) {
-                            Image(systemName: "circle.fill")
-                                .font(.system(size: 5))
-                                .foregroundColor(.accentColor)
-                        }
-                    }
+                    Image(systemName: "circle.fill")
+                        .font(.system(size: 5))
+                        .foregroundColor(isShowingCurrentMonth ? .secondary : .accentColor)
+                        .frame(width: 18, height: 24)
+                        .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
                 .help("Return to Today")
-                
-                Spacer()
-                
+
                 Button(action: { changeMonth(by: 1) }) {
                     Image(systemName: "chevron.right")
                         .font(.system(size: 11, weight: .bold))
                         .foregroundColor(.secondary)
-                        .frame(width: 24, height: 24)
+                        .frame(width: 18, height: 24)
                         .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
+                .help("Next Month")
             }
-            .padding(.horizontal, 4)
+            .padding(.leading, 7)
+            .padding(.trailing, 3.5)
             
             // Weekday headers
             let weekdaySymbols = reorderedWeekdaySymbols()
