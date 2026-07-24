@@ -8,29 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		XX4CDD7BDA9527231FD154XX /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = XX0182E36293E7A95A811DXX /* Assets.xcassets */; };
-		XXAD25BC19689D5035DE9BXX /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = XXE274B35F27E365B849C0XX /* ContentView.swift */; };
-		XXEF4A5F92C0CED022A4A2XX /* DayBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = XX0D045423B498D9D4B488XX /* DayBarApp.swift */; };
-		XXSETTSTORE0000000000BLD /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = XXSETTSTORE0000000000REF /* SettingsStore.swift */; };
-		XXDATEFMT000000000000BLD /* DatePatternFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = XXDATEFMT000000000000REF /* DatePatternFormatter.swift */; };
-		XXCALMENU000000000000BLD /* CalendarMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = XXCALMENU000000000000REF /* CalendarMenuView.swift */; };
-		XXPREFSVW000000000000BLD /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = XXPREFSVW000000000000REF /* PreferencesView.swift */; };
 		XXABOUTVW000000000000BLD /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = XXABOUTVW000000000000REF /* AboutView.swift */; };
-		XXWINMGR0000000000000BLD /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = XXWINMGR0000000000000REF /* WindowManager.swift */; };
+		XXCALMENU000000000000BLD /* CalendarMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = XXCALMENU000000000000REF /* CalendarMenuView.swift */; };
+		XXDATEFMT000000000000BLD /* DatePatternFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = XXDATEFMT000000000000REF /* DatePatternFormatter.swift */; };
+		XXEF4A5F92C0CED022A4A2XX /* DayBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = XX0D045423B498D9D4B488XX /* DayBarApp.swift */; };
+		XXPREFSVW000000000000BLD /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = XXPREFSVW000000000000REF /* PreferencesView.swift */; };
+		XXSETTSTORE0000000000BLD /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = XXSETTSTORE0000000000REF /* SettingsStore.swift */; };
 		XXSTATMGR000000000000BLD /* StatusItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = XXSTATMGR000000000000REF /* StatusItemManager.swift */; };
+		XXWINMGR0000000000000BLD /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = XXWINMGR0000000000000REF /* WindowManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		XX0182E36293E7A95A811DXX /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		XX0D045423B498D9D4B488XX /* DayBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayBarApp.swift; sourceTree = "<group>"; };
 		XX2D1593FF5CED69F5C83DXX /* DayBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		XXE274B35F27E365B849C0XX /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		XXSETTSTORE0000000000REF /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
-		XXDATEFMT000000000000REF /* DatePatternFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePatternFormatter.swift; sourceTree = "<group>"; };
-		XXCALMENU000000000000REF /* CalendarMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarMenuView.swift; sourceTree = "<group>"; };
-		XXPREFSVW000000000000REF /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		XXABOUTVW000000000000REF /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
-		XXWINMGR0000000000000REF /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
+		XXCALMENU000000000000REF /* CalendarMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarMenuView.swift; sourceTree = "<group>"; };
+		XXDATEFMT000000000000REF /* DatePatternFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePatternFormatter.swift; sourceTree = "<group>"; };
+		XXPREFSVW000000000000REF /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		XXSETTSTORE0000000000REF /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		XXSTATMGR000000000000REF /* StatusItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemManager.swift; sourceTree = "<group>"; };
+		XXWINMGR0000000000000REF /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				XX0D045423B498D9D4B488XX /* DayBarApp.swift */,
-				XXE274B35F27E365B849C0XX /* ContentView.swift */,
 				XXSETTSTORE0000000000REF /* SettingsStore.swift */,
 				XXDATEFMT000000000000REF /* DatePatternFormatter.swift */,
 				XXCALMENU000000000000REF /* CalendarMenuView.swift */,
@@ -147,7 +144,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				XXEF4A5F92C0CED022A4A2XX /* DayBarApp.swift in Sources */,
-				XXAD25BC19689D5035DE9BXX /* ContentView.swift in Sources */,
 				XXSETTSTORE0000000000BLD /* SettingsStore.swift in Sources */,
 				XXDATEFMT000000000000BLD /* DatePatternFormatter.swift in Sources */,
 				XXCALMENU000000000000BLD /* CalendarMenuView.swift in Sources */,
@@ -166,21 +162,30 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95FP69XZCG;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = DayBar;
+				INFOPLIST_KEY_CFBundleDisplayName = Daybar;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Stephen M. Walker II";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.daybar.daybar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.resonant.daybar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = macosx;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -197,21 +202,30 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95FP69XZCG;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = DayBar;
+				INFOPLIST_KEY_CFBundleDisplayName = Daybar;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Stephen M. Walker II";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.daybar.daybar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.resonant.daybar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = macosx;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -271,7 +285,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = ___BESTMACOSVERSION___;
+				MACOSX_DEPLOYMENT_TARGET = "___BESTMACOSVERSION___";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -331,7 +345,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = ___BESTMACOSVERSION___;
+				MACOSX_DEPLOYMENT_TARGET = "___BESTMACOSVERSION___";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -343,13 +357,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0000000000000000CFGLST /* Build configuration list for [unknown] */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		XX364880BF72A2386FEE7BXX /* Build configuration list for PBXNativeTarget "DayBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

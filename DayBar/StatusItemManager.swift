@@ -43,15 +43,15 @@ final class StatusItemManager: NSObject, NSMenuDelegate {
         dateTimeItem.target = self
         menu.addItem(dateTimeItem)
         
-        // About DayBar
-        let aboutItem = NSMenuItem(title: "About DayBar", action: #selector(openAbout), keyEquivalent: "")
+        // About Daybar
+        let aboutItem = NSMenuItem(title: "About Daybar", action: #selector(openAbout), keyEquivalent: "")
         aboutItem.target = self
         menu.addItem(aboutItem)
         
         menu.addItem(NSMenuItem.separator())
         
-        // Quit DayBar
-        let quitItem = NSMenuItem(title: "Quit DayBar", action: #selector(quitApp), keyEquivalent: "q")
+        // Quit Daybar
+        let quitItem = NSMenuItem(title: "Quit Daybar", action: #selector(quitApp), keyEquivalent: "q")
         quitItem.target = self
         menu.addItem(quitItem)
         

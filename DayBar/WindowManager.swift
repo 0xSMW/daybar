@@ -29,7 +29,7 @@ final class WindowManager {
             backing: .buffered,
             defer: false
         )
-        window.title = "DayBar Preferences"
+        window.title = "Daybar Preferences"
         window.contentViewController = hostingController
         window.center()
         window.isReleasedWhenClosed = false
@@ -56,7 +56,7 @@ final class WindowManager {
             backing: .buffered,
             defer: false
         )
-        window.title = "About DayBar"
+        window.title = "About Daybar"
         window.contentViewController = hostingController
         window.center()
         window.isReleasedWhenClosed = false

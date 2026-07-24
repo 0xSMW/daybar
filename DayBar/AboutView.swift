@@ -7,7 +7,7 @@ import SwiftUI
 
 struct AboutView: View {
     private var displayName: String {
-        Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String ?? "DayBar"
+        Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String ?? "Daybar"
     }
 
     private var version: String {
