@@ -51,7 +51,7 @@ final class WindowManager {
         let hostingController = NSHostingController(rootView: contentView)
         
         let window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 280, height: 220),
+            contentRect: NSRect(x: 0, y: 0, width: 280, height: 235),
             styleMask: [.titled, .closable],
             backing: .buffered,
             defer: false

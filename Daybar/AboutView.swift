@@ -30,7 +30,7 @@ struct AboutView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 32, height: 32)
-                    .foregroundColor(.accentColor)
+                    .foregroundStyle(.primary)
             }
             
             VStack(spacing: 4) {
@@ -46,6 +46,8 @@ struct AboutView: View {
                 .font(.system(size: 11))
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
+                .lineLimit(2)
+                .fixedSize(horizontal: false, vertical: true)
                 .padding(.horizontal, 10)
             
             Divider()
